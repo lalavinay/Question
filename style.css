@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(145deg, #ffe3ef, #fff7fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Canvas layers */
+#bgCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#confettiCanvas {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Card */
+.card {
+  background: rgba(255,255,255,0.9);
+  padding: 40px 32px 44px;
+  border-radius: 24px;
+  text-align: center;
+  width: 340px;
+  box-shadow: 0 30px 60px rgba(255,120,170,0.25);
+  position: relative;
+  z-index: 10;
+}
+
+.top-heart {
+  font-size: 40px;
+  animation: heartbeat 1.6s infinite;
+}
+
+@keyframes heartbeat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  color: #ff4f9a;
+}
+
+.question { color: #666; }
+.question.bold { font-size: 18px; font-weight: 600; }
+
+.subtitle { color: #b96a8f; margin-bottom: 28px; }
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#yes {
+  background: linear-gradient(135deg,#ff6fae,#ff3f8e);
+  color: white;
+}
+
+#no {
+  background: #eee;
+  color: #555;
+}
